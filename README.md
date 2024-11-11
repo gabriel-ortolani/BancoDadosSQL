@@ -14,13 +14,13 @@ Esse guia sera dividido em etapas para demonstrar desde a crição de tabelas, c
 ## Passo 1: criação do Banco de Dados e das Tabelas
 #### 1.1 Criando o DB
 
-```
+```SQL
 CREAT DATABASE biblioteca;
 USE biblioteca;
 ```
 
 #### 1.2 Criando a tabela 'editora'
-```
+```SQL
 CREATE TABLE editora (
     id_editora INT AUTO_INCREMENT PRIMARY KEY,
     nome_editora VARCHAR(100) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE editora (
 ```
 
 #### 1.3 Criando a tabela 'autor'
-```
+```SQL
 CREATE TABLE autor (
     id_autor INT AUTO_INCREMENT PRIMARY KEY,
     nome_autor VARCHAR(100) NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE autor (
 ```
 
 #### 1.4 Criando a tabela 'assunto'
-```
+```SQL
 CREATE TABLE assunto (
     id_assunto INT AUTO_INCREMENT PRIMARY KEY,
     descricao_assunto VARCHAR(300) NOT NULL
@@ -46,7 +46,7 @@ CREATE TABLE assunto (
 ```
 
 #### 1.5 Criando a tabela 'livro'
-```
+```SQL
 CREATE TABLE livro (
     id_livro INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(150) NOT NULL,
@@ -60,11 +60,19 @@ CREATE TABLE livro (
 #### 1.6 Criando uma tabela EXTRA
 A tabela EXTRA vai servir para exemplificar a exclusão
 
-```
+```SQL
 CREATE TABLE extra(
     id INT PRIMARY KEY AUTO_INCREMENT,
     produtos VARCHAR(50),
     quantidade INT(20),
     preco DOUBLE NOT NULL
 );
+```
+
+## Passo 2: editar tabelas usando 'ALTER'
+Após a criação da tabela, podemos adicionar novos campos. Vamos adicionar uma coluna 'email' na tabela 'autor'
+
+```SQL
+ALTER TABLE autor
+ADD COLUMN email VARCHAR(100);
 ```
