@@ -56,3 +56,15 @@ CREATE TABLE livro (
     FOREING KEY(id_assunto) REFERENCES assunto(id_assunto)
 );
 ```
+
+#### 1.6 Criando uma tabela EXTRA
+A tabela EXTRA vai servir para exemplificar a exclusão
+
+```
+CREATE TABLE extra(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    produtos VARCHAR(50),
+    quantidade INT(20),
+    preco DOUBLE NOT NULL
+);
+```
