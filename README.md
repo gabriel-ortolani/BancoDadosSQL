@@ -15,7 +15,7 @@ Esse guia sera dividido em etapas para demonstrar desde a crição de tabelas, c
 #### 1.1 Criando o DB
 
 ```SQL
-CREAT DATABASE biblioteca;
+CREATE DATABASE biblioteca;
 USE biblioteca;
 ```
 
@@ -51,9 +51,12 @@ CREATE TABLE livro (
     id_livro INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(150) NOT NULL,
     ano_publicacao YEAR,
-    FOREING KEY(id_editora) REFERENCES editora(id_editora),
-    FOREING KEY(id_autor) REFERENCES autor(id_autor),
-    FOREING KEY(id_assunto) REFERENCES assunto(id_assunto)
+    editora INT,
+    autor INT,
+    assunto INT,
+    FOREIGN KEY(editora) REFERENCES editora(id_editora),
+    FOREIGN KEY(autor) REFERENCES autor(id_autor),
+    FOREIGN KEY(assunto) REFERENCES assunto(id_assunto)
 );
 ```
 
@@ -76,3 +79,13 @@ Após a criação da tabela, podemos adicionar novos campos. Vamos adicionar uma
 ALTER TABLE autor
 ADD COLUMN email VARCHAR(100);
 ```
+
+## Passo 3: Remover tabela usando 'DROP'
+Se precisar remover uma tabela usamos o comando 'DROP.
+Neste exemplo vamos remover a tabela 'extra'
+
+```SQL
+DROP TABLE extra;
+```
+
+## Passo 4: 
