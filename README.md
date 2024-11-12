@@ -112,6 +112,7 @@ VALUES
 #### 4.3 Inserindo dados na tabela 'assunto'
 ```SQL
 INSERT INTO assunto(descricao_assunto)
+VALUES
 ('Ficção'),
 ('Mistério'),
 ('Terror'),
