@@ -50,7 +50,7 @@ CREATE TABLE assunto (
 CREATE TABLE livro (
     id_livro INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(150) NOT NULL,
-    ano_publicacao YEAR,
+    ano_publicacao INT,
     editora INT,
     autor INT,
     assunto INT,
@@ -117,4 +117,23 @@ VALUES
 ('Mistério'),
 ('Terror'),
 ('Ação');
+```
+
+#### 4.4 Inserindo dados na tabela 'livro'
+```SQL
+INSERT INTO livro(titulo, ano_publicacao, editora, autor, assunto)
+VALUES
+('Capitães da Areia', '1937', 1, 1, 5),
+('Dom Casmurro', '1899', 2, 2, 5),
+('A Biblioteca da Meia-Noite', '2020', 3, 3, 2),
+('Memórias Póstumas de Brás Cubas', '1881', 1, 2, 5);
+```
+
+## Passo 5: Atualizando os dados usando 'UPDATE'
+Podemos atualizar os dados com o comando UPDATE.
+Vamos corrigir a data de publicação do livro 'Capitães da Areia'
+```SQL
+UPDATE livro
+SET ano_publicacao = 1938
+WHERE titulo = 'Capitês da Areia';
 ```
