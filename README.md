@@ -88,4 +88,32 @@ Neste exemplo vamos remover a tabela 'extra'
 DROP TABLE extra;
 ```
 
-## Passo 4: 
+## Passo 4: Inserindo dados usando 'INSERT'
+Agora que as tabelas já estão prontas, vamos inserir dados nelas.
+
+### Passo 4.1 Inserindo dados na tabela 'editora'
+```SQL
+INSERT INTO editora(nome_editora, pais)
+VALUES
+('Editora Alfa', 'Brasil'),
+('Editora Beta', 'Portugal'),
+('Editora Bertrand Brasil', 'Brasil');
+```
+
+#### 4.2 Inserindo dados na tabela 'autor'
+```SQL
+INSERT INTO autor(nome_autor, data_nascimento, email)
+VALUES
+('Jorge Amado', '1912-08-10', 'jorjinho@email.com'),
+('Machado de Assis', '1839-06-21', 'machadinho@email.com'),
+('Matt Haig', '1975-06-03', 'matt@email.com');
+```
+
+#### 4.3 Inserindo dados na tabela 'assunto'
+```SQL
+INSERT INTO assunto(descricao_assunto)
+('Ficção'),
+('Mistério'),
+('Terror'),
+('Ação');
+```
